@@ -1,0 +1,180 @@
+// ------------- COMPONENTS --------------------- // 
+.bg_pink {
+  background: $pink;
+}
+.pink {
+  color: $pink !important;
+}
+.bg_green {
+  background: $green;
+}
+.bg_orange {
+  background: $orange;
+}
+.bg_purple {
+  background: $purple;
+}
+.call {
+  border: 2px solid #ffffffdd;
+  border-radius: 2em;
+  transition: all 300ms $out;
+  &:hover {
+    background: #fff;
+    color: $pink;
+  }
+}
+
+.hero_text {
+  max-width: 40em;
+  text-align: center;
+  margin: 18em auto;
+}
+
+.call_hero {
+  cursor: pointer;
+  position: relative;
+  background: $pink;
+  border-radius: 2em;
+  padding: .75em 2em;
+  margin-top: .9em;
+  color: #fff;
+  font-size: 1.1em;
+  border: none;
+  font-family: $mont;
+  overflow: hidden;
+  z-index: 2;
+  box-shadow: 0 0 0 0 #ffffff20;
+  transition: all 300ms $out;
+  &:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: #fff;
+    border-radius: 2em;
+    transition: width 300ms $inout;
+    z-index: -1;
+  }
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 .4em #ffffff20;
+  }
+  &:hover {
+    color: $pink;
+    &:after {
+      left: 0;
+      width: 100%;
+    }
+  }
+}
+
+.call_alt {
+  cursor: pointer;
+  position: relative;
+  background: #fff;
+  border-radius: 2em;
+  padding: .75em 2em;
+  margin-top: .9em;
+  color: $pink;
+  font-size: 1.1em;
+  border: 2px solid $pink;
+  font-family: $mont;
+  font-weight: 700;
+  transition: all 300ms $inout;
+  &:hover {
+    background: $pink;
+    color: #fff;
+  }
+}
+
+.icon {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  right: 0;
+  width: 3em;
+  height: 3em;
+  border: 4px solid #fff;
+  border-radius: 50%;
+}
+
+.scrolled {
+  padding: .7em 0;
+  * {
+    color: $pink;
+  }
+  .call {
+    border-color: $pink;
+    &:hover {
+      background: $pink;
+      color: #fff;
+    }
+  }
+  a:after {
+    background: $pink_20;
+  }
+  &:after {
+    height: 100%;
+  }
+}
+
+.span_2 {
+  grid-column: span 2;
+}
+
+.logo {
+  text-transform: uppercase;
+  color: $pink;
+  font-size: 1.5em;
+}
+
+.view_more {
+  // padding: .7em 1.5em;
+  border-radius: 2em;
+  position: relative;
+  // overflow: hidden;
+  width: fit-content;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: $pink_20;
+    border-radius: 50%;
+    width: 1em;
+    height: 1em;
+    transition: transform 200ms $inout;
+  }
+  &:hover:after {
+    transform: translate(-50%, -50%) scale(2);
+  }
+}
+
+.burger_button {
+  z-index: 99;
+  cursor: pointer;
+  width: 1.5em;
+  height: 1.5em;
+  background: $pink;
+  transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  right: 2em;
+  border-radius: 50%;
+  // border: .5em solid #ffffff;
+
+}
+#burgerBtnAlt {
+  display: none;
+}
+.shown {
+  transform: translateY(0) !important;
+  opacity: 1 !important;
+  transition: all 300ms $out !important;
+  z-index: 10;
+}
